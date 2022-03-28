@@ -28,4 +28,4 @@ A core lightweight blogging engine with the addition of pages, should you need t
 
 ## Demo
 
-A demo can be found here: [https://demo.getfeather.app/](https://demo.getfeather.app/)
+A demo can be found here: [https://getfeather.app/](https://getfeather.app/)
