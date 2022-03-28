@@ -1,0 +1,30 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	## Add trailing slashes
+	RewriteCond %{REQUEST_URI} !(/$|\.) 
+	RewriteRule (.*) %{REQUEST_URI}/ [R=301,L] 
+
+	## Remove .php ext
+	RewriteCond %{REQUEST_FILENAME}.php -f
+	RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]
+	
+	## The directory where feather is installed. This should match const Root in config.php
+	## This will usually be your server root /
+	RewriteBase /
+	
+	## 404
+	ErrorDocument 404 /Error404NotFound
+	
+	## Blog rewrites
+	RewriteRule ^sitemap\/?$ index.php?sitemap=true [L]
+	RewriteRule ^rss\/?$ index.php?rss=xml [L]
+	RewriteRule ^rss\/([a-z]+)$ index.php?rss=$1 [L]
+	RewriteRule ^post\/([A-Za-z0-9-_\s]+)\/?$ index.php?post=$1 [L]
+	RewriteRule ^([A-Za-z0-9-_\s]+)\/?$ index.php?page=$1 [L]
+	RewriteRule ^tag\/([A-Za-z0-9-_\s]+)\/?.*$ index.php?tag=$1
+	RewriteRule ^(.*\/)?p\/([0-9]+)\/?$ index.php?pagination=$2&%{QUERY_STRING} [L]
+</IfModule>
+
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+	Header set Cache-Control "max-age=2419200, public"
+</FilesMatch>

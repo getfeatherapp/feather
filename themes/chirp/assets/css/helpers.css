@@ -1,0 +1,381 @@
+/**
+ * Image width
+ */
+.alignfull
+{
+	margin: 0 auto 25px auto;
+    margin-left: calc( -100vw / 2 + 100% / 2 );
+    margin-right: calc( -100vw / 2 + 100% / 2 );
+    max-width: 100vw;
+}
+
+.alignfull img
+{
+	width: 100%;
+}
+
+.alignwide
+{
+	margin: 0 auto 25px auto;
+    margin-left: calc( -75vw / 2 + 100% / 2 );
+    margin-right: calc( -75vw / 2 + 100% / 2 );
+    max-width: 75vw;
+}
+/**
+ * Fadeout
+ */
+.fadeout
+{
+    bottom: 75px;
+    height: 12em;
+    background: linear-gradient( rgba( 255, 255, 255, 0 ) 0%, rgba( 255, 255, 255, 0.5 ) 50%, rgba( 255, 255, 255, 1 ) 100% );
+    position: absolute;
+    width: 100%;
+}
+/**
+ * Highlight
+ */
+.highlight
+{
+ 	background: #fff5d1;
+	color: #222222;
+}
+/**
+ * Spacer
+ */
+.spacer
+{
+	width: 100%;
+	float: left;
+	padding: 25px 0;
+}
+/**
+ * Padder
+ */
+.padder
+{
+	padding: 25px;
+}
+/**
+ * Wrap
+ */
+.wrap
+{
+	width: 75%;
+	margin: 0 auto;
+}
+/**
+ * Snippet
+ */
+.snippet
+{
+	font-size: larger;
+	color: #222222;
+	margin-bottom: 35px;
+}
+/**
+ * Stylized Ampersand
+ */
+span.fancy-amp
+{
+	font-family: Baskerville, Palatino, "Book Antiqua", serif!important;
+  	font-style: italic;
+  	color: inherit;
+  	font-size: larger;
+}
+/**
+ * Stylized Headings
+ */
+.fancy-heading
+{
+	color: #111111;
+	width: 100%;
+}
+
+.fancy-heading:after
+{
+	background: #111111;
+    display: block;
+    height: 2px;
+    width: 5%;
+    content: " ";
+    margin: 25px 0;
+}
+/**
+ * Cancel list styles
+ */
+.nolist
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+/**
+ * Cancel margins
+ */
+.no-margin
+{
+	margin: 0;
+}
+
+.no-top-margin
+{
+	margin-top: 0;
+}
+
+.no-bottom-margin
+{
+	margin-bottom: 0;
+}
+
+.no-left-margin
+{
+	margin-left: 0;
+}
+
+.no-right-margin
+{
+	margin-right: 0;
+}
+/**
+ * Cancel padding
+ */
+.no-padding
+{
+	padding: 0!important;
+}
+
+.no-top-padding
+{
+	padding-top: 0;
+}
+
+.no-bottom-padding
+{
+	padding-bottom: 0;
+}
+
+.no-left-padding
+{
+	padding-left: 0;
+}
+
+.no-right-padding
+{
+	padding-right: 0;
+}
+/**
+ * Cancel borders
+ */
+.no-border
+{
+	border: none;
+}
+
+.no-top-border
+{
+	border: none;
+}
+.no-bottom-border
+{
+	border: none;
+}
+
+.no-left-border
+{
+	border: none;
+}
+
+.no-right-border
+{
+	border: none;
+}
+/**
+ * Colors
+ */
+.muted
+{
+	color: #888888;
+}
+
+.taste-the-rainbow
+{
+	-webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient( 0, #1ec840, #21d0ce 20%, #1c7fee 40%, #5f15f2 55%, #ba0cf8 80%, #ff247d );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-box-decoration-break: clone;
+}
+/**
+ * Positioning
+ * We're floating left for mobile first.
+ *
+ * Alignright is floated right in the media
+ * queries below.
+ */
+.alignleft
+{
+	float: left!important;
+}
+
+.alignright
+{
+	float: left!important;
+}
+
+.aligncenter
+{
+	float: none!important;
+	margin: 0 auto;
+}
+
+.textleft
+{
+	text-align: left;
+}
+
+.textright
+{
+	text-align: right;
+}
+
+.textcenter
+{
+	text-align: center;
+}
+
+.inline
+{
+	display: inline!important;
+}
+
+.inline-block
+{
+	display: inline-block!important;
+}
+
+.relative
+{
+	position: relative!important;
+}
+
+.absolute
+{
+	position: absolute!important;
+}
+
+.fixed
+{
+	position: fixed!important;
+}
+/**
+ * Hide from screenreaders and browsers.
+ */
+.hidden
+{
+	display: none!important;
+	visibility: hidden;
+}
+/**
+ * Hide only visually, but have it available
+ * for screenreaders.
+ */
+.visuallyhidden,
+.screen-reader-text
+{
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+/**
+ * Extends the .visuallyhidden class to allow
+ * the element to be focusable when navigated
+ * to via the keyboard.
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus
+{
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+/**
+ * Hide visually and from screenreaders, but
+ * maintain layout
+ */
+.invisible
+{
+	visibility: hidden;
+}
+/**
+ * Floats
+ */
+.clearfix:before,
+.clearfix:after
+{
+	content: "";
+	display: table;
+}
+
+.clearfix:after
+{
+	clear: both;
+}
+
+.clearfix
+{
+	zoom: 1;
+}
+/**
+ * Misc
+ */
+.help-text
+{
+	font-size: 12px;
+}
+/**
+ * iPads (portrait)
+ */
+@media only screen and (min-width: 767px) {
+
+}
+/**
+ * iPads (landscape)
+ */
+@media only screen and (min-width: 1023px) {
+	.alignleft
+	{
+		float: left!important;
+	}
+
+	.alignright
+	{
+		float: right!important;
+	}
+}
+/**
+ * Small Desktops
+ */
+@media only screen and (min-width: 1278px) {
+	
+}
+/**
+ * Medium Desktops
+ */
+@media only screen and (min-width: 1678px) {
+
+}
+/**
+ * Large Desktops
+ */
+@media only screen and (min-width: 1918px) {
+
+}

@@ -1,0 +1,139 @@
+/**
+ * CSS to override styling for contrast mode
+ */
+body.contrast,
+body.contrast header#main,
+body.contrast #footer,
+body.contrast #aside,
+body.contrast #aside::-webkit-scrollbar,
+body.contrast #aside::-webkit-scrollbar-thumb
+{
+    background: #181818!important;
+    color: #888888;
+}
+
+body.contrast #aside,
+body.contrast #aside::-webkit-scrollbar,
+body.contrast #aside::-webkit-scrollbar-thumb
+{
+    background: #151515!important;
+}
+
+
+body.contrast progress
+{
+    background-color: #000000;
+}
+
+body.contrast progress::-webkit-progress-bar
+{
+	background-color: #000000;
+}
+
+body.contrast progress::-moz-progress-bar
+{
+	background-color: #000000;
+}
+
+body.contrast .progress-bar
+{
+  	background-color: #000000;
+}
+
+body.contrast #site-logo h2,
+body.contrast #site-logo h3,
+body.contrast #primary ul li a,
+body.contrast #primary ul li,
+body.contrast .contrast-toggle,
+body.contrast code[class*=language-], 
+body.contrast pre[class*=language-]
+{
+    color: #888888;
+    text-shadow: none;
+}
+
+body.contrast .postmeta,
+body.contrast .postmeta a,
+body.contrast .postnavi a
+{
+    color: #888888!important;
+}
+
+body.contrast nav#primary ul p
+{
+    color: #555555;
+}
+
+body.contrast #site-logo img,
+body.contrast #social li img
+{
+    filter: invert(100%);
+}
+
+body.contrast #social li img
+{
+	opacity: 0.5; 
+}
+
+body.contrast #primary ul li.menu-item-has-children:after
+{
+    border-top: 4px solid rgba( 255, 255, 255, 0.25 );
+}
+
+body.contrast h1,
+body.contrast h2,
+body.contrast h3,
+body.contrast h4,
+body.contrast h5,
+body.contrast h6,
+body.contrast #site-logo h1,
+body.contrast blockquote,
+body.contrast blockquote p
+{
+    color: #aaaaaa!important;
+}
+
+body.contrast header#main
+{
+    border-color: rgba( 255, 255, 255, 0.05 );
+}
+
+body.contrast .burger-inner, 
+body.contrast .burger-inner::before, 
+body.contrast .burger-inner::after,
+body.contrast .burger.is-active .burger-inner,
+body.contrast .burger.is-active .burger-inner::before,
+body.contrast .burger.is-active .burger-inner::after 
+{
+	background: #888888;
+}
+
+body.contrast .postmeta .meta-sep
+{
+    background: #555555;
+}
+
+body.contrast hr
+{
+    border-color: #333333;
+}
+
+body.contrast input[type="text"],
+body.contrast input[type="number"],
+body.contrast input[type="password"],
+body.contrast input[type="email"],
+body.contrast input[type="number"],
+body.contrast input[type="search"],
+body.contrast input[type="tel"],
+body.contrast input[type="url"],
+body.contrast textarea,
+body.contrast #author-bio,
+body.contrast .accordion-item,
+body.contrast .accordion-toggle,
+body.contrast :not(pre)>code[class*=language-], 
+body.contrast pre[class*=language-]
+{
+	color: #aaaaaa!important;
+    background: #202020!important;
+    border: none!important;
+}
