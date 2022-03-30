@@ -7,15 +7,16 @@ if ( ! defined( "FEATHER_INIT" ) ) die();
 // setup some vars
 $root  = Config::Root;
 $title = Config::Title;
+$desc  = Config::Description;
 $ver   = FEATHER_VERSION;
 ?>
 <!DOCTYPE html>
 <html lang="en-GB" itemscope itemtype="https://schema.org/WebSite" prefix="og://ogp.me/ns#">
 <head>
 <meta charset="UTF-8" />
-<title><?php echo $Blog->get_title(); ?></title>
+<title><?php echo $title; ?></title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=5.0" />
-<meta name="description" content="<?php echo Config::Description; ?>" />
+<meta name="description" content="<?php echo $desc; ?>" />
 <?php feather_head(); ?>
 </head>
 <body>
@@ -93,5 +94,5 @@ else
 }
 // footer
 echo "<footer style='margin-top:32px;'>Built with Feather v{$ver}</footer>";
-feather_head();
+feather_footer();
 echo "</body></html>";
