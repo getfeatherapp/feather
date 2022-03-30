@@ -6,7 +6,7 @@ define( "FEATHER_INIT", "true" );
 /**
  * Feather Version
  */
-define( "FEATHER_VERSION", "1.0.0" );
+define( "FEATHER_VERSION", "1.0.1" );
 /**
  * Include main files
  */

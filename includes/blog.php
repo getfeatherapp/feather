@@ -37,10 +37,24 @@ class Blog {
 		$this->_page_num       = 0;
 		$this->_page_num_total = 1;
 		/**
-		 * If Config is set to use a page as
-		 * the frontpage instead of posts
+		 * Check if this is the Sitemap or RSS
 		 */
-		if ( ! empty( $frontpage ) && empty( $tag_slug ) && $pg < 1 )
+		if ( not_blank( 'sitemap' ) ||  $is_rss === true )
+		{
+			$this->posts = Blog::loadPosts( $tag_slug );
+
+			// pagination
+			$this->_page_num       = $pagination;
+			$offset                = Config::PostsPerPage * $this->_page_num;
+			$length                = Config::PostsPerPage;
+			$this->_page_num_total = ceil( count( $this->posts ) / $length);
+			$this->url = Url::Archive;
+		}
+		/**
+		 * If not Sitemap or RSS and Config is set to use 
+		 * a page as the frontpage instead of posts
+		 */
+		else if ( ! empty( $frontpage ) && empty( $tag_slug ) && $pg < 1 )
 		{
 			// fetch single post
 			if ( $post_slug !== "" )

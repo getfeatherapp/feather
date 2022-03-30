@@ -1,4 +1,4 @@
-<?php if ( ! defined( "FEATHER_INIT" ) ) die();	
+<?php if ( ! defined( "FEATHER_INIT" ) ) die();
 /**
  * Core functions that output 
  * in the document <head>
@@ -24,7 +24,29 @@ if ( ! function_exists( "feather_footer" ) )
 {
 	function feather_footer()
 	{
-		// do core
+		/**
+		 * Automatically execute Sitemap 
+		 * rebuild without requiring the 
+		 * user needing to setup a cronjob.
+		 *
+		 * Requires site visits to trigger.
+		 *
+		 * If sitemap.xml doesn't exist
+		 * run immediately
+		 */
+		if ( ! file_exists( dirname(__DIR__) . '/sitemap.xml' ) )
+		{
+			echo "<img src='".get_base_url()."/index.php?sitemap=true' width='1px' height='1px' />";
+		}
+		else
+		{
+			$time = date( "H:i:s" );
+	
+			if ( $time > "08:00:00" && $time < "12:00:00"  ) 
+			{
+				echo "<img src='".get_base_url()."/index.php?sitemap=true' width='1px' height='1px' />";
+			}
+		}
 	}
 }
 /**
