@@ -205,6 +205,23 @@ if ( ! function_exists( "home_link" ) )
 	}
 }
 /**
+ * Returns server root path
+ */
+if ( ! function_exists( "get_root_path" ) )
+{
+	function get_root_path()
+	{
+		return $_SERVER['DOCUMENT_ROOT'];
+	}
+}
+if ( ! function_exists( "root_path" ) )
+{
+	function root_path()
+	{
+		echo $_SERVER['DOCUMENT_ROOT'];
+	}
+}
+/**
  * Returns the base URL, including "http(s)"
  */
 if ( ! function_exists( "get_base_url" ) )
