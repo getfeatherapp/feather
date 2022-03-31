@@ -52,6 +52,23 @@ if ( Config::DEBUG === true )
 	error_reporting( E_ALL );
 }
 /**
+ * Active theme directory
+ */
+if ( ! function_exists( "get_theme_dir" ) )
+{
+	function get_theme_dir()
+	{
+		return Config::Root . "themes/" . Config::Theme . "/";
+	}
+}
+if ( ! function_exists( "theme_dir" ) )
+{
+	function theme_dir()
+	{
+		echo Config::Root . "themes/" . Config::Theme . "/";
+	}
+}
+/**
  * CSS directory
  */
 if ( ! function_exists( "get_theme_css_dir" ) )
