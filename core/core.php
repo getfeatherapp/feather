@@ -8,7 +8,7 @@ if ( ! function_exists( "feather_head" ) )
 	function feather_head()
 	{
 		echo "
-			<meta name='generator' content='Feather ".FEATHER_VERSION."' />
+			<meta name='generator' content='Powered by Feather ".FEATHER_VERSION."' />
 			<link href='".get_core_css_dir()."emoji.min.css' rel='stylesheet' async='async' />
 			<link href='".get_core_css_dir()."animate.min.css' rel='stylesheet' async='async' />
 
