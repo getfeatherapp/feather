@@ -13,7 +13,7 @@ $tag_slug  = isset( $_GET['tag'] ) ? filter_var( $_GET['tag'], FILTER_SANITIZE_S
  */
 if ( $Blog->url != Url::Error404 )
 {
-	$content  = $post->content;
+	$content = $post->content;
 }
 else
 {
@@ -42,7 +42,7 @@ $content = htmlspecialchars_decode( $content );
 if ( $post != "" && $page_slug != 'posts' && empty( $tag_slug ) )
 {
 	$htmltitle   = htmlentities( $post->title );
-	$htmlsummary = htmlentities( $post->summary );
+	$htmlsummary = htmlentities( substr( $post->summary, 0, 55 ) )."...";
 	$htmldesc    = htmlentities( substr( $content, 0, 155 ) )."...";
 }
 else
@@ -73,7 +73,7 @@ else
 /**
  * If we're on a post 
  */
-if ( $Blog->url === Url::Post )
+if ( $Blog->url === Url::Post || empty( $frontpage ) && $url == Config::Root || $page_slug == 'posts' || ! empty( $tag_slug ) )
 {	
 	/**
 	 * If we have a featured image
@@ -106,8 +106,8 @@ else if ( $Blog->url === Url::Page )
 		echo "<meta name='twitter:image' content='{$post->image}' />".PHP_EOL;
 	}
 
-	echo '<title>'.$title . Config::TitleSeparator . $htmlsummary.'</title>'.PHP_EOL;
-	echo '<meta property="og:title" content="'.$title . Config::TitleSeparator . $htmlsummary.'" />'.PHP_EOL;
+	echo '<title>'.$title.'</title>'.PHP_EOL;
+	echo '<meta property="og:title" content="'.$title.'" />'.PHP_EOL;
 	echo '<meta name="description" content="'.$htmldesc.'" />'.PHP_EOL;
 	echo '<meta property="og:description" content="'.$htmldesc.'" />'.PHP_EOL;
 	echo '<meta name="twitter:description" content="'.$htmldesc.'" />'.PHP_EOL;
