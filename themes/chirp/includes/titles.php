@@ -73,7 +73,7 @@ else
 /**
  * If we're on a post 
  */
-if ( $Blog->url === Url::Post || empty( $frontpage ) && $url == Config::Root || $page_slug == 'posts' || ! empty( $tag_slug ) )
+if ( $Blog->url === Url::Post || empty( $frontpage ) && $url == Config::Root || $page_slug == 'posts' || empty( $tag_slug ) )
 {	
 	/**
 	 * If we have a featured image
